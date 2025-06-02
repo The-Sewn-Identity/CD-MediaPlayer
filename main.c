@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <sys/types.h>
-#include <cdio/cdio.h>
+#include <ncurses.h>
 #include <vlc/libvlc.h>
+#include "start.h"
 
 int main(int argc, const char *argv[]) {
     /* CdIo_t *p_cdio = cdio_open ("/dev/sr0", DRIVER_DEVICE);
@@ -22,7 +22,13 @@ int main(int argc, const char *argv[]) {
             (long unsigned int) cdio_get_track_lsn(p_cdio, CDIO_CDROM_LEADOUT_TRACK));
     cdio_destroy(p_cdio); */
 
+    printf("Welcome to the media player\n");
+    printf("Press Enter if you want to read from the CD");
     libvlc_instance_t *Instance = libvlc_new(0, NULL);
+
+    char buffer[128];
+    
+    // fgets(buffer, sizeof(buffer), stdin);
 
     return 0;
 }
