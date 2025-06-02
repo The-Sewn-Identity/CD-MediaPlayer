@@ -1,3 +1,0 @@
-/home/viktor/Documents/CD-MediaPlayer/build/CMakeFiles/main.dir
-/home/viktor/Documents/CD-MediaPlayer/build/CMakeFiles/edit_cache.dir
-/home/viktor/Documents/CD-MediaPlayer/build/CMakeFiles/rebuild_cache.dir
