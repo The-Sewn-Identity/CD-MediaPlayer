@@ -1,14 +1,12 @@
 #ifndef START_H
 #define START_H
 
-// #define WINDOW_WIDTH 40
-// #define WINDOW_HEIGHT 30
-
-#define WELCOME_MESSAGE "Welcome!\n"
+#define CD_ROM_PATH "cdda:///dev/cdrom"
 
 void start();
-void startmenu();
+int startmenu();
 
+extern libvlc_instance_t *instance;
 void vlcInit();
 
 #endif

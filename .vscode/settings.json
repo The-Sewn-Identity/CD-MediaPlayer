@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "libvlc.h": "c"
+        "libvlc.h": "c",
+        "libvlc_media_list_player.h": "c"
     }
 }

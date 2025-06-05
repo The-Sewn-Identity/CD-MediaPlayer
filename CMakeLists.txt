@@ -4,6 +4,7 @@ project(CD-MediaPlayer)
 INCLUDE_DIRECTORIES("include")
 
 include_directories(/usr/include/vlc/)
+link_directories(/usr/lib/vlc/)
 include_directories(/usr/include/ncurses/)
 
 add_executable(main src/main.c src/start.c)
