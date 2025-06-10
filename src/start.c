@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ncurses.h>
-#include <vlc/libvlc.h>
 #include "start.h"
-
-char COLOR[] = "\u001b[42m";
-char RESET[] = "\u001b[0m";
+#include "colors.h"
 
 int startmenu() {
     FILE *sign = fopen("../sign.txt", "r");
@@ -28,15 +25,9 @@ void start() {
     noecho();
     
     start_color();
-    init_color(COLOR_WHITE, 1000, 1000, 1000);
-    init_pair(1, COLOR_WHITE, COLOR_GREEN);
+    init_color(TRUE_WHITE, 1000, 1000, 1000);
+    init_pair(1, TRUE_WHITE, COLOR_GREEN);
     wbkgd(stdscr, COLOR_PAIR(1));
 
     startmenu();
-}
-
-
-libvlc_instance_t *instance;
-void vlcInit() {
-    instance = libvlc_new(0, NULL);
 }
