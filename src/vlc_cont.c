@@ -30,12 +30,6 @@ void vlc_play() {
 }
 
 void vlc_next_track() {
-    libvlc_media_track_t **track_ptr = malloc(sizeof(&media_track));
-    libvlc_media_tracks_get(media, &track_ptr);
-
-    info_string = media_track->psz_description;
-
-    printw("%s\n", info_string);
     libvlc_media_list_player_next(media_list_player);
 }
 
